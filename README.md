@@ -1,5 +1,11 @@
 # Repro
 
+Run:
+
+```shell
+./gradlew run
+```
+
 # Dependency Tree Output:
 
 ```
