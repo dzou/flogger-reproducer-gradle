@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName 'com.example.Driver'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform('com.google.cloud:gcp-lts-bom:1.0.7')
+
+    implementation 'com.google.cloud:google-cloud-pubsublite:0.13.2'
+    implementation 'com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
